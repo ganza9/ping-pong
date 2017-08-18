@@ -10,8 +10,8 @@ function pingPong(num){
     else if(num % 15 === 0) {
       result.push('pingpong');
     }
-    else if(num ) {
-    result.push(i);
+    else {
+    result.push('i');
     }
   }
   return result;
@@ -21,12 +21,12 @@ function pingPong(num){
 $(document).ready(function(){
   $("form#pingPong").submit(function(event) {
     event.preventDefault();
-    var num = parseInt($("input#stringIn").val());
-    var result = pingPong(num);
-    $("#num").show(num);
+    $("li#list-item").remove();
+    var num = parseInt($("input#number").val());
+    var input = pingPong(num);
+     result = input.join(" ");
 
-  )}
-
-    $("#result").show();
+    $("#result").append("<li id='list-item'>" + result +"</li>");
+  });
 
   });

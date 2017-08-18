@@ -1,14 +1,14 @@
 function pingPong(num){
   var result = [];
-  for (var i=1; i<=num; i++){
-    if(num % 3 === 0) {
-      result.push('ping');
+  for (var i=1; i<=num; i++) {
+    if((num % 15) === 0) {
+      result.push('pingpong');
     }
-    else if(num % 5 == 0){
+    else if((num % 5) == 0){
       result.push('pong');
     }
-    else if(num % 15 === 0) {
-      result.push('pingpong');
+    else if((num % 3) === 0) {
+      result.push('ping');
     }
     else {
     result.push('i');
@@ -26,7 +26,6 @@ $(document).ready(function(){
     var input = pingPong(num);
      result = input.join(" ");
 
-    $("#result").append("<li id='list-item'>" + result +"</li>");
+    $("#result").append("<li #list-item>" + result +"</li>");
   });
-
-  });
+});

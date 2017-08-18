@@ -1,16 +1,21 @@
-var pingNum = function pingPong(num){
-
-  if(num % 3 === 0) {
-    return ('ping');
-
-  if(num % 5 == 0)
-    return ('pong');
-
-  if(num % 15 === 0)
-    return ('pingpong');
-
+function pingPong(num){
+  var result = [];
+  for (var i=1; i<=num; i++){
+    if(num % 3 === 0) {
+      result.push('ping');
     }
-  };
+    else if(num % 5 == 0){
+      result.push('pong');
+    }
+    else if(num % 15 === 0) {
+      result.push('pingpong');
+    }
+    else if(num ) {
+    result.push(i);
+    }
+  }
+  return result;
+};
 
 
 $(document).ready(function(){
@@ -18,14 +23,10 @@ $(document).ready(function(){
     event.preventDefault();
     var num = parseInt($("input#stringIn").val());
     var result = pingPong(num);
-    $("#num").text(num);
+    $("#num").show(num);
 
-    if(!result){
-      $("#not").text("not");
-    } else {
-      $("#not").text("");
-    }
-    $("#stringOut").show();
+  )}
+
+    $("#result").show();
 
   });
-});

@@ -7,20 +7,24 @@
     <script src="js/scripts.js"></script>
     <meta charset="utf-8">
     <title>PingPong</title>
-  </head> 
+  </head>
   <body>
     <div class="container">
       <h1 class-"jumbotron">Ping Pong</h1>
+        <h2>Let's play!</h2>
+        <h3>Rules:</h3>
+        <p>Ping Pong will count up to your number from 1 with the following exceptions:</p>
+        <ol>
+          <li>Numbers divisible by 3 become "ping"</li>
+          <li>Numbers divisible by 5 become "pong"</li>
+          <li>Numbers divisible by 3 and 5 become "pingpong"</li>
+        </ol>
       <form id="pingPong">
         <div class="form-group">
-          <p>Enter a number: </p>
-          <label for="stringIn"></label>
-          <input id="stringIn" class="form-control" type="text">
-          <button type="submit" class="btn">Submit!</button>
-
-          <div id="stringOut">
-            <p><span id="num"></span></p>
-          </div>
+          <label for="number">Enter your number here:</label>
+          <input id="number" type="text">
+          <button type="submit" class="btn">Ping Pong!</button>
+          <div id="result"></div>
         </div>
       </form>
     </div>

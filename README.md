@@ -4,6 +4,15 @@
 
 #### By Gennaro Anzalone
 
+## Specs
+
+When a user enters a number it is returned.
+When a user enters a number divisible by 3, return "ping".
+When a user enters a number divisible by 5, return "pong".
+When a user returns a number divisible by 15, return "ping-pong".
+User can enter any number into the field and get a return that counts to that number.
+
+
 ## Description
 
 A web application that takes a number from a user and returns a range of numbers from 1 to the chosen number with the following exceptions:
@@ -21,7 +30,7 @@ Go to https://github.com/ganza9/ping-pong and click on the clone or download but
 
 ## Known Bugs
 
-There are no known bugs.
+Only positive numbers work. Letters, words, and negative numbers do not get a return. 
 
 ## Support and contact details
 
